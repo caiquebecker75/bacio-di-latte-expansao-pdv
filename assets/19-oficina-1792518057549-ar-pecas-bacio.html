@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Projeto 75 LAB para Bacio di Latte · Bacio Casa no freezer: a sobremesa do fim de semana</title>
+<meta name="description" content="Peças de ponto de venda do projeto Bacio Casa no freezer: a sobremesa do fim de semana para Bacio di Latte em 3D e em realidade aumentada, em tamanho real.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Projeto 75 LAB para Bacio di Latte">
+<meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Ftesteira%2Ftesteira-hero-1600.jpg?alt=media&amp;token=bbec1f85-b8cb-4505-8a60-bfdf19df8759">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<script type="module" src="https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Fcomum%2Fmodel-viewer-4.3.1.min.js?alt=media&amp;token=d7a83562-b91e-4416-b4e2-4f6e68171036"></script>
+<script src="https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Fcomum%2Fqrcode.min.js?alt=media&amp;token=a150fe4b-30ee-476e-bf5e-933233c856bc"></script>
+<style>
+  :root { --ink: #050505; --ink2: #3a3a3d; --paper: #F2F1E9; --paper2: #E7E5DA; --lime: #C0EE4E; --teal: #01A290; --linha: rgba(5,5,5,.16); --pad: clamp(16px, 4vw, 40px); }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--paper); color: var(--ink); font: 16px/1.5 'Space Grotesk', system-ui, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+  body { overflow-x: hidden; }
+  button { font: inherit; color: inherit; cursor: pointer; background: none; border: 0; }
+  a { color: inherit; }
+  .mono { font-family: 'Space Mono', ui-monospace, monospace; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; font-size: 12px; }
+  header.topo { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px var(--pad); border-bottom: 2px solid var(--linha); }
+  .marca75 { font-family: 'Big Shoulders Display', Impact, sans-serif; font-weight: 900; font-size: 26px; letter-spacing: -.01em; line-height: 1; }
+  .marca75 span { background: var(--lime); padding: 0 6px; }
+  header.topo img { height: 30px; max-width: 150px; object-fit: contain; background: var(--ink); padding: 5px 8px; }
+  .intro { padding: 18px var(--pad) 4px; max-width: 1400px; margin: 0 auto; }
+  .eyebrow { color: var(--ink2); }
+  .eyebrow b { color: var(--teal); }
+  h1 { font-family: 'Big Shoulders Display', Impact, sans-serif; font-weight: 900; text-transform: uppercase; font-size: clamp(36px, 6.2vw, 64px); line-height: 1.04; letter-spacing: -.02em; margin-top: 6px; }
+  h1 em { font-style: normal; color: var(--teal); }
+  .intro p { max-width: 640px; margin-top: 8px; color: var(--ink2); }
+  .pecas { display: flex; gap: 10px; overflow-x: auto; padding: 14px var(--pad) 6px; scroll-snap-type: x mandatory; max-width: 1400px; margin: 0 auto; scrollbar-width: thin; }
+  .pecas button { flex: 0 0 auto; width: 148px; scroll-snap-align: start; text-align: left; background: #fff; border: 2px solid var(--linha); padding: 6px; transition: transform .15s, background .15s; }
+  .pecas button img { width: 100%; height: 150px; object-fit: cover; display: block; background: var(--paper2); }
+  .pecas button b { display: block; font-family: 'Big Shoulders Display', Impact, sans-serif; font-weight: 800; text-transform: uppercase; font-size: 18px; line-height: 1.05; margin-top: 6px; }
+  .pecas button small { display: block; font-size: 12px; color: var(--ink2); margin-top: 2px; }
+  .pecas button.on { border-color: var(--ink); background: var(--lime); }
+  .pecas button:hover { transform: translate(-2px, -2px); }
+  main { display: grid; gap: 18px; padding: 10px var(--pad) 26px; max-width: 1400px; margin: 0 auto; grid-template-columns: minmax(0, 1fr); }
+  @media (min-width: 980px) { main { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); align-items: start; } }
+  .palco { position: relative; border: 2px solid var(--ink); background: #fff; }
+  .abas { display: flex; border-bottom: 2px solid var(--ink); }
+  .abas button { flex: 1; padding: 12px 6px; min-height: 48px; border-right: 2px solid var(--ink); }
+  .abas button:last-child { border-right: 0; }
+  .abas button.on { background: var(--ink); color: var(--lime); }
+  .vista { display: none; }
+  .vista.on { display: block; }
+  model-viewer { width: 100%; height: min(66vh, 640px); min-height: 380px; background: #EDECE6; --poster-color: #EDECE6; }
+  .vista img, .vista video { width: 100%; height: min(66vh, 640px); min-height: 380px; object-fit: contain; display: block; background: #EDECE6; }
+  .ar-botao { position: absolute; left: 50%; bottom: 16px; transform: translateX(-50%); background: var(--lime); color: var(--ink); border: 2px solid var(--ink); padding: 12px 18px; min-height: 48px; white-space: nowrap; }
+  .ar-botao:hover { transform: translate(calc(-50% - 2px), -2px); }
+  .dica { font-size: 13px; color: var(--ink2); padding: 10px 12px; border-top: 2px solid var(--linha); }
+  aside { display: grid; gap: 14px; }
+  aside h2 { font-family: 'Big Shoulders Display', Impact, sans-serif; font-weight: 900; text-transform: uppercase; font-size: clamp(34px, 5vw, 56px); line-height: 1.04; }
+  .ficha { display: grid; grid-template-columns: minmax(0, 1fr); border: 2px solid var(--linha); background: #fff; }
+  .ficha div { padding: 10px 12px; border-bottom: 2px solid var(--linha); }
+  .ficha div:last-child { border-bottom: 0; }
+  .ficha .mono { color: var(--ink2); display: block; margin-bottom: 2px; }
+  .botoes { display: flex; flex-wrap: wrap; gap: 8px; }
+  .botao { display: inline-flex; align-items: center; gap: 8px; border: 2px solid var(--ink); padding: 12px 16px; min-height: 48px; text-decoration: none; background: #fff; }
+  .botao:hover { background: var(--lime); transform: translate(-2px, -2px); }
+  .qr { display: none; gap: 14px; align-items: center; border: 2px dashed var(--linha); padding: 12px; background: #fff; }
+  .qr div:first-child { width: 132px; height: 132px; flex: none; }
+  .qr svg { width: 132px; height: 132px; display: block; }
+  @media (min-width: 980px) { .qr { display: flex; } }
+  .aviso { background: #fff; border-left: 6px solid var(--lime); padding: 12px 14px; }
+  footer { border-top: 2px solid var(--linha); padding: 22px var(--pad) calc(26px + env(safe-area-inset-bottom)); display: grid; gap: 10px; font-size: 14px; color: var(--ink2); max-width: 1400px; margin: 0 auto; }
+  footer .whats { justify-self: start; background: var(--ink); color: var(--lime); text-decoration: none; }
+  footer .whats:hover { background: var(--lime); color: var(--ink); }
+</style>
+</head>
+<body>
+<header class="topo"><div class="marca75">75 <span>LAB</span></div><img src="https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Fcomum%2Flogo.png?alt=media&amp;token=67c3b26c-7e12-4ced-97a9-0c81e5b6dd8d" alt="Bacio di Latte"></header>
+<section class="intro">
+  <div class="eyebrow mono"><b>(AR)</b> Projeto 75 LAB para Bacio di Latte</div>
+  <h1>Bacio Casa no freezer: a sobremesa do fim de semana <em>em tamanho real</em></h1>
+  <p>Escolha a peça, gire em 3D e toque em &quot;Ver no meu espaço&quot; para colocar a peça no seu ponto de venda pelo celular, em tamanho real.</p>
+</section>
+
+<nav class="pecas" id="pecas" aria-label="Peças do projeto">
+  <button data-peca="testeira" class="on"><img src="https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Ftesteira%2Ftesteira-hero-1600.jpg?alt=media&amp;token=bbec1f85-b8cb-4505-8a60-bfdf19df8759" alt="Testeira iluminada do freezer" loading="lazy"><b>Testeira iluminada do freezer</b><small>130 x 22 cm · no freezer 130 x 200 x 75 cm</small></button>
+  <button data-peca="vitrine"><img src="https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Fvitrine%2Fvitrine-hero-1600.jpg?alt=media&amp;token=9bbb64a2-05e1-482c-a1e4-e955d1f4977b" alt="Vitrine compacta Bacio Casa" loading="lazy"><b>Vitrine compacta Bacio Casa</b><small>45 x 55 x 30 cm</small></button>
+</nav>
+<main>
+  <section class="palco">
+    <div class="abas" role="tablist">
+      <button class="mono on" data-aba="ar">3D e AR</button>
+      <button class="mono" data-aba="foto">Foto na loja</button>
+      <button class="mono" data-aba="video">Giro</button>
+    </div>
+    <div class="vista on" data-vista="ar">
+      <model-viewer id="mv" src="https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Ftesteira%2Ftesteira-modelo.glb?alt=media&amp;token=be46a80d-0881-491d-a92c-4ed25a3a6c3c&amp;f=.glb" ios-src="https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Ftesteira%2Ftesteira-modelo.usdz?alt=media&amp;token=4eee336f-1926-45ed-8d9d-7eda05f4af51&amp;f=.usdz" poster="https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Ftesteira%2Ftesteira-poster.webp?alt=media&amp;token=08ed67c7-7fcd-4995-b4fc-137618430e10" alt="Testeira iluminada do freezer em 3D"
+        ar ar-modes="webxr scene-viewer quick-look" ar-scale="fixed" ar-placement="floor" camera-controls touch-action="pan-y"
+        camera-orbit="-30deg 78deg auto" environment-image="https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Fcomum%2Fsupermercado.hdr?alt=media&amp;token=aa80455b-30b4-4e40-b62d-791094008f2f&amp;f=.hdr" tone-mapping="neutral" exposure="1" shadow-intensity="1" shadow-softness="0.8"
+        interaction-prompt="auto" loading="eager">
+        <button slot="ar-button" class="ar-botao mono">Ver no meu espaço →</button>
+      </model-viewer>
+      <div class="dica">Arraste para girar, use dois dedos para aproximar. No celular, toque em "Ver no meu espaço" e aponte para o chão.</div>
+    </div>
+    <div class="vista" data-vista="foto"><a id="fotoLink" href="https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Ftesteira%2Ftesteira-hero.jpg?alt=media&amp;token=a42e398f-7f52-4f7e-9eae-1e0b561df94e" target="_blank" rel="noopener"><img id="foto" src="https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Ftesteira%2Ftesteira-hero-1600.jpg?alt=media&amp;token=bbec1f85-b8cb-4505-8a60-bfdf19df8759" alt="Testeira iluminada do freezer instalada na loja"></a></div>
+    <div class="vista" data-vista="video"><video id="video" src="https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Ftesteira%2Ftesteira-video.mp4?alt=media&amp;token=4a7e9457-43bd-4318-9bab-f0a49c86ec02" poster="https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Ftesteira%2Ftesteira-capa-video.jpg?alt=media&amp;token=35dffeb5-c4ba-427e-9031-f44993a34b5b" muted loop playsinline preload="none" controls></video></div>
+  </section>
+  <aside>
+    <h2 id="nome">Testeira iluminada do freezer</h2>
+    <p id="descricao"></p>
+    <div class="ficha">
+      <div><span class="mono">Medidas (L x A x P)</span><span id="medidas">Testeira 130 x 22 cm · conjunto freezer + testeira 130 x 200 x 75 cm</span></div>
+      <div id="linhaMaterial"><span class="mono">Material</span><span id="material">Testeira iluminada, logo em foil cobre, laterais impressas</span></div>
+      <div id="linhaQtd"><span class="mono">Quantidade no piloto</span><span id="quantidade">12</span></div>
+    </div>
+    <div class="botoes">
+      <a class="botao mono" id="baixarFoto" href="https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Ftesteira%2Ftesteira-hero.jpg?alt=media&amp;token=a42e398f-7f52-4f7e-9eae-1e0b561df94e" target="_blank" rel="noopener">Foto em alta →</a>
+      <a class="botao mono" id="baixarVideo" href="https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Ftesteira%2Ftesteira-video.mp4?alt=media&amp;token=4a7e9457-43bd-4318-9bab-f0a49c86ec02" target="_blank" rel="noopener">Vídeo MP4 →</a>
+    </div>
+    <div class="qr"><div id="qr"></div><div><b>No computador?</b><br>Aponte a câmera do celular para abrir esta peça em realidade aumentada.</div></div>
+  </aside>
+</main>
+<footer>
+  <div><b>75 LAB</b> · Estratégia, design e produção para o ponto de venda.</div>
+  <div>CENU · Centro Empresarial das Nações Unidas, Torre Norte, Av. das Nações Unidas, 12.901, Brooklin, São Paulo, SP</div>
+  <a class="botao mono whats" href="https://wa.me/5511986765634" target="_blank" rel="noopener">Falar com a 75 LAB no WhatsApp →</a>
+</footer>
+<script>
+(function () {
+  var PECAS = [{"id":"testeira","nome":"Testeira iluminada do freezer","medidas":"Testeira 130 x 22 cm · conjunto freezer + testeira 130 x 200 x 75 cm","material":"Testeira iluminada, logo em foil cobre, laterais impressas","quantidade":12,"descricao":"Peça do piloto: vai no topo do freezer exclusivo, com a frase da ocasião e a frente trocável por campanha.","glb":"https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Ftesteira%2Ftesteira-modelo.glb?alt=media&token=be46a80d-0881-491d-a92c-4ed25a3a6c3c&f=.glb","usdz":"https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Ftesteira%2Ftesteira-modelo.usdz?alt=media&token=4eee336f-1926-45ed-8d9d-7eda05f4af51&f=.usdz","poster":"https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Ftesteira%2Ftesteira-poster.webp?alt=media&token=08ed67c7-7fcd-4995-b4fc-137618430e10","hero":"https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Ftesteira%2Ftesteira-hero-1600.jpg?alt=media&token=bbec1f85-b8cb-4505-8a60-bfdf19df8759","heroGrande":"https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Ftesteira%2Ftesteira-hero.jpg?alt=media&token=a42e398f-7f52-4f7e-9eae-1e0b561df94e","video":"https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Ftesteira%2Ftesteira-video.mp4?alt=media&token=4a7e9457-43bd-4318-9bab-f0a49c86ec02","capa":"https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Ftesteira%2Ftesteira-capa-video.jpg?alt=media&token=35dffeb5-c4ba-427e-9031-f44993a34b5b","gondola":false},{"id":"vitrine","nome":"Vitrine compacta Bacio Casa","medidas":"45 x 55 x 30 cm","material":"Acrílico jateado","quantidade":0,"descricao":"Segunda porta do kit, depois do piloto: balcão de padaria e café, com régua de sabores e QR.","glb":"https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Fvitrine%2Fvitrine-modelo.glb?alt=media&token=bd37b900-0ce0-48e9-adfe-1f07b537c314&f=.glb","usdz":"https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Fvitrine%2Fvitrine-modelo.usdz?alt=media&token=062b69a6-f3b5-4997-a144-d808020d055a&f=.usdz","poster":"https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Fvitrine%2Fvitrine-poster.webp?alt=media&token=492151d2-b9f1-4edf-b944-fa3207551e0d","hero":"https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Fvitrine%2Fvitrine-hero-1600.jpg?alt=media&token=9bbb64a2-05e1-482c-a1e4-e955d1f4977b","heroGrande":"https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Fvitrine%2Fvitrine-hero.jpg?alt=media&token=8d115167-016c-4413-a7e1-f6c4669da245","video":"https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Fvitrine%2Fvitrine-video.mp4?alt=media&token=40a337c5-7416-4336-bb4a-37576cbf9bcb","capa":"https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0855446481.firebasestorage.app/o/agencia%2Fradar_feeaa3b8-0ea4-4ea0-8c56-5637ce2337a5%2Far-pdv%2Fbacio-di-latte-16241f%2Fvitrine%2Fvitrine-capa-video.jpg?alt=media&token=765050ed-7a2e-4e49-ba1b-b61d9fd1455c","gondola":false}];
+  var URL_PAGINA = location.href.split("#")[0];
+  var mv = document.getElementById('mv');
+  if (!mv) return;
+  function qs(s) { return document.querySelector(s); }
+  function qr(id) {
+    try {
+      var u = new URL(URL_PAGINA); if (id) u.searchParams.set('peca', id);
+      var q = qrcode(0, 'M'); q.addData(u.toString()); q.make();
+      qs('#qr').innerHTML = q.createSvgTag({ cellSize: 4, margin: 2, scalable: true });
+    } catch (e) {}
+  }
+  function aba(nome) {
+    document.querySelectorAll('.abas button').forEach(function (b) { b.classList.toggle('on', b.dataset.aba === nome); });
+    document.querySelectorAll('.vista').forEach(function (v) { v.classList.toggle('on', v.dataset.vista === nome); });
+    var v = qs('#video');
+    if (nome === 'video') { v.preload = 'auto'; v.play().catch(function () {}); } else { v.pause(); }
+  }
+  function mostrar(id) {
+    var p = PECAS.filter(function (x) { return x.id === id; })[0] || PECAS[0];
+    document.querySelectorAll('#pecas button').forEach(function (b) { b.classList.toggle('on', b.dataset.peca === p.id); });
+    mv.poster = p.poster; mv.src = p.glb;
+    if (p.usdz) mv.setAttribute('ios-src', p.usdz); else mv.removeAttribute('ios-src');
+    mv.alt = p.nome + ' em 3D';
+    qs('#nome').textContent = p.nome; qs('#descricao').textContent = p.descricao; qs('#medidas').textContent = p.medidas;
+    qs('#material').textContent = p.material; qs('#linhaMaterial').hidden = !p.material;
+    qs('#quantidade').textContent = p.quantidade ? Number(p.quantidade).toLocaleString('pt-BR') : ''; qs('#linhaQtd').hidden = !p.quantidade;
+    qs('#foto').src = p.hero; qs('#fotoLink').href = p.heroGrande; qs('#baixarFoto').href = p.heroGrande;
+    var v = qs('#video'); v.pause(); v.src = p.video; v.poster = p.capa; qs('#baixarVideo').href = p.video;
+    qr(p.id);
+    try { var u = new URL(location.href); u.searchParams.set('peca', p.id); history.replaceState(null, '', u.toString()); } catch (e) {}
+  }
+  document.querySelectorAll('#pecas button').forEach(function (b) { b.addEventListener('click', function () { mostrar(b.dataset.peca); aba('ar'); }); });
+  document.querySelectorAll('.abas button').forEach(function (b) { b.addEventListener('click', function () { aba(b.dataset.aba); }); });
+  var inicial = new URLSearchParams(location.search).get('peca');
+  mostrar(inicial || PECAS[0].id);
+})();
+</script>
+</body>
+</html>
