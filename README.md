@@ -1,4 +1,4 @@
-# Proposta 75 LAB para a Bacio di Latte
+# Deck Bacio di Latte · A sobremesa do seu fim de semana
 
 Apresentação da 75 LAB publicada em https://projetos.75lab.com.br/bacio-di-latte-expansao-pdv/
 
